@@ -9,7 +9,7 @@ void Katutaso::maaritaAsunnot()
 {
     cout<<"Maaritetaan 2 kpl katutason asuntoja"<<endl;
     cout<<"Asunto maaritety asukkaita= "<<asukasMaara<<" nelioita= "<<neliot<<endl;
-    cout<<"Asunto maaritety asukkaita= "<<asukasMaara<<" nelioita= "<<neliot<<endl;
+
 }
 double Katutaso::laskeKulutus(double h)
 {
