@@ -1,5 +1,6 @@
 #include "katutaso.h"
 
+
 Katutaso::Katutaso()
 {
     cout<<"Katutaso luotu"<<endl;
@@ -7,13 +8,14 @@ Katutaso::Katutaso()
 }
 void Katutaso::maaritaAsunnot()
 {
-    cout<<"Maaritetaan 2 kpl katutason asuntoja"<<endl;
-    cout<<"Asunto maaritety asukkaita= "<<asukasMaara<<" nelioita= "<<neliot<<endl;
 
+    cout<<"Maaritetaan 2 kpl katutason asuntoja"<<endl;
+    as1.maarita(2,100);
+    as2.maarita(2,100);
+    cout<<"Maaritetaan katutason kerrokselta perittyja asuntoja"<<endl;
+    this->Kerros::maaritaAsunnot();
 }
 double Katutaso::laskeKulutus(double h)
 {
-    double kulutus = h*asukasMaara*neliot;
-    cout<<"Asunnon kulutus, kun hinta= "<<h<<" on "<<kulutus<<endl;
-    return kulutus;
+    return as1.laskeKulutus(h)+as2.laskeKulutus(h)+Kerros::laskeKulutus(h);
 }
