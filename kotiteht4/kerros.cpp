@@ -7,13 +7,14 @@ Kerros::Kerros()
 }
 void Kerros::maaritaAsunnot()
 {
-    cout<<"Maaritetaan katutason kerrokselta perittyja asuntoja"<<endl;
     cout<<"Maaritetaan 4 kpl kerroksen asuntoja"<<endl;
-    cout<<"Asunto maaritety asukkaita= "<<asukasMaara<<" nelioita= "<<neliot<<endl;
+    as1.maarita(2,100);
+    as2.maarita(2,100);
+    as3.maarita(2,100);
+    as4.maarita(2,100);
 }
 double Kerros::laskeKulutus(double h)
 {
-    double kulutus = h*asukasMaara*neliot;
-    cout<<"Asunnon kulutus, kun hinta= "<<h<<" on "<<kulutus<<endl;
-    return kulutus;
+
+    return as1.laskeKulutus(h)+as2.laskeKulutus(h)+as3.laskeKulutus(h)+as4.laskeKulutus(h);
 }
