@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-class Kerrostalo:public Katutaso,public Kerros
+class Kerrostalo
 {
 public:
     Kerrostalo();
