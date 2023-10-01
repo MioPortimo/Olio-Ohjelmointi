@@ -5,11 +5,14 @@
 using namespace std;
 
 
-class Kerros
-{
+class Kerros:public Asunto{
 public:
     Kerros();
-    Asunto *as1,*as2,*as3,*as4;
+    ~Kerros();
+    Asunto* pas1;
+    Asunto* pas2;
+    Asunto* pas3;
+    Asunto* pas4;
     virtual void maaritaAsunnot(void);
     double laskeKulutus(double);
 };
