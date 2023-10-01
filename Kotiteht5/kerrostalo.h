@@ -9,10 +9,12 @@ class Kerrostalo
 {
 public:
     Kerrostalo();
+    ~Kerrostalo();
     double laskeKulutus(double);
 private:
-    Katutaso *eka;
-    Kerros *toka,*Kolmas;
+    Katutaso* peka;
+    Kerros* ptoka;
+    Kerros* pkolmas;
 };
 
 #endif // KERROSTALO_H
