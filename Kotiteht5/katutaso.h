@@ -8,8 +8,9 @@ class Katutaso:public Kerros
 {
 public:
     Katutaso();
+    ~Katutaso();
     Asunto *pas1,*pas2;
-    virtual void maaritaAsunnot(void)override;
+    void maaritaAsunnot();
     double laskeKulutus(double);
 };
 
