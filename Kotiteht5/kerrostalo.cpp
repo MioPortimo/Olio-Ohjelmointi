@@ -4,14 +4,20 @@ Kerrostalo::Kerrostalo()
 {
     cout<<"Kerrostalo luotu"<<endl;
     cout<<"Maaritetaan koko kerrostalon kaikki asunnot"<<endl;
-    eka->maaritaAsunnot();
-    toka->maaritaAsunnot();
-    Kolmas->maaritaAsunnot();
+    peka = new Katutaso;
+    ptoka = new Kerros;
+    pkolmas = new Kerros;
 
 }
 double Kerrostalo::laskeKulutus(double h)
 {
-    double katutasonKulutus = eka->laskeKulutus(h);
-    double kerrostenKulutus = toka->laskeKulutus(h)+Kolmas->laskeKulutus(h);
+    double katutasonKulutus = peka.laskeKulutus(h);
+    double kerrostenKulutus = ptoka.laskeKulutus(h)+pkolmas.laskeKulutus(h);
     return katutasonKulutus+kerrostenKulutus;
+}
+Kerrostalo::~Kerrostalo()
+{
+delete peka;
+delete ptoka;
+delete pkolmas;
 }
